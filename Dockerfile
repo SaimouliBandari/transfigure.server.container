@@ -12,5 +12,7 @@ RUN pip install -r requirements.txt
 # Copy the application code
 COPY . .
 
+EXPOSE 1503
+
 # Run the application
 CMD ["python3", "-m" ,"app.main"]
