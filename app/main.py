@@ -11,4 +11,4 @@ async def root():
 app.include_router(router=router, prefix='/excel', tags=['excel'])
 
 if __name__ == "__main__":
-    uvicorn.run(app=app,port=1503)
+    uvicorn.run(app=app,host="0.0.0.0",port=1503)
