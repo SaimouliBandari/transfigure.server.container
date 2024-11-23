@@ -1,7 +1,7 @@
 from fastapi import APIRouter
-from fastapi.responses import HTMLResponse, StreamingResponse
-from excel.service import convert_file_to
+from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
+from app.internal.excel import convert_file_to
 
 class ConversionModal(BaseModel):
     data: str

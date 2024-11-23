@@ -1,13 +1,16 @@
-FROM --platform=arm64 python:3
+# Use a Python base image
+FROM python:3.9
 
-COPY src ./
+# Set the working directory
+WORKDIR /transfigure
 
-COPY requirements.txt ./
+# Copy requirements and install dependencies
+COPY requirements.txt .
 
-RUN pip install --upgrade --no-deps --force-reinstall -r requirements.txt
+RUN pip install -r requirements.txt
 
+# Copy the application code
 COPY . .
 
-CMD ["python3" , "src/app.py"]
-
-EXPOSE 8080
+# Run the application
+CMD ["python3", "-m" ,"app.main"]
