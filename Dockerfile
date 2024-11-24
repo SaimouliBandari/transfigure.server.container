@@ -15,4 +15,4 @@ COPY . .
 EXPOSE 1503
 
 # Run the application
-CMD ["python3", "-m" ,"app.main"]
+CMD ["python3", "-m" ,"app"]
